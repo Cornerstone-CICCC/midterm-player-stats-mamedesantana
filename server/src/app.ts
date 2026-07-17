@@ -7,7 +7,9 @@ import rankingRoutes from "./routes/rankingRoutes.js";
 const app = express();
 app.use(cors({ origin: process.env.CLIENT_ORIGIN ?? "http://localhost:4321" }));
 app.use(express.json());
-app.get("/", (_req, res) => res.json({ message: "Player Performance API is running" }));
+app.get("/", (_req, res) =>
+  res.json({ message: "Player Performance API is running" }),
+);
 app.use("/api/performances", performanceRoutes);
 app.use("/api", lookupRoutes);
 app.use("/api/rankings", rankingRoutes);

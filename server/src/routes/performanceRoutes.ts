@@ -1,5 +1,11 @@
 import { Router } from "express";
-import { createPerformance, deletePerformance, getPerformanceById, getPerformances, updatePerformance } from "../controllers/performanceController.js";
+import {
+  createPerformance,
+  deletePerformance,
+  getPerformanceById,
+  getPerformances,
+  updatePerformance,
+} from "../controllers/performanceController.js";
 const router = Router();
 router.get("/", getPerformances);
 router.get("/:id", getPerformanceById);

@@ -2,5 +2,31 @@
 import "../styles/global.css";
 const { title, active = "performances" } = Astro.props;
 ---
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><title>{title}</title></head>
-<body><div class="app"><aside class="sidebar"><div class="brand"><span class="brand-mark">🏆</span><div>WORLD CUP 2026<small>PLAYER PERFORMANCE<br/>EXPLORER</small></div></div><nav class="nav"><a class={active === "performances" ? "active" : ""} href="/"><span>📈</span> Performances</a><a class={active === "rankings" ? "active" : ""} href="/rankings"><span>🏆</span> Rankings</a></nav><div class="sidebar-footer">⚽ FIFA World Cup 2026™</div></aside><main class="main"><slot /></main></div></body></html>
+
+<!doctype html>
+<html lang="en">
+    <head
+        ><meta charset="UTF-8" /><meta
+            name="viewport"
+            content="width=device-width"
+        /><title>{title}</title></head
+    >
+    <body
+        ><div class="app">
+            <aside class="sidebar">
+                <div class="brand">
+                    <span class="brand-mark">🏆</span><div>
+                        WORLD CUP 2026<small
+                            >PLAYER PERFORMANCE<br />EXPLORER</small>
+                    </div>
+                </div><nav class="nav">
+                    <a
+                        class={active === "performances" ? "active" : ""}
+                        href="/"><span>📈</span> Performances</a
+                    ><a
+                        class={active === "rankings" ? "active" : ""}
+                        href="/rankings"><span>🏆</span> Rankings</a>
+                </nav><div class="sidebar-footer">⚽ FIFA World Cup 2026™</div>
+            </aside><main class="main"><slot /></main>
+        </div></body>
+</html>
